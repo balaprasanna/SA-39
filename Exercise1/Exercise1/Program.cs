@@ -10,9 +10,14 @@ namespace Exercise1
     {
         static void Main(string[] args)
         {
-            Console.Write("Hello");
+
+            // a program to request name and print a greeting message
+
+          //  Console.Write(" Please Enter your name");
+            String s = Console.ReadLine();
+            Console.Write("Good Morning" + s);
             Console.ReadLine();
-            Console.Write("Hello world");
+    
             
         }
     }
