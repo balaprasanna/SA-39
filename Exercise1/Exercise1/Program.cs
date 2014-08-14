@@ -12,6 +12,8 @@ namespace Exercise1
         {
             Console.Write("Hello");
             Console.ReadLine();
+            Console.Write("Hello world");
+            
         }
     }
 }
