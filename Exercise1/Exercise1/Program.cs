@@ -74,8 +74,16 @@ namespace Exercise1
                             ex1Point35 ex1p35 = new ex1Point35();
                             ex1p35.exercise1Point35();
                         }
-                            
-
+                        else if (val == 36)
+                        {
+                            ex1Point36 ex1p36 = new ex1Point36();
+                            ex1p36.exercise1Point36();
+                        }
+                        else if (val == 37)
+                        {
+                            ex1Point37 ex1p37 = new ex1Point37();
+                            ex1p37.exercise1Point37();
+                        }   
                         else
                         {
                             Console.Write(" Oops No exercise found @ this number");
@@ -350,6 +358,88 @@ namespace Exercise1
             }
         }
     }
+
+
+     class ex1Point36
+    {
+        /* Program for palindrome
+         */
+        public void exercise1Point36()
+        {
+            Console.WriteLine("Enter a phrase");
+            String s = Console.ReadLine();
+
+            int length = s.Length;
+            int sublenght= length / 2;
+            int Count=0; 
+           //Console.Write("" + s.Length + "sub" + sublenght);
+           for (int i = 0; i < sublenght; i++)
+            {
+                if(s[i]==s[(s.Length-1)-i])
+                {
+                    Count++;
+                }
+            } 
+             
+           if  (sublenght == Count)
+           { 
+                Console.WriteLine("palindrome");
+           } 
+           else
+           { 
+               Console.WriteLine(" not palindrome");
+           }
+
+          
+            
+                Console.ReadLine();
+        }
+    }
+
+     class ex1Point37
+     {
+         /* Program to read a phrase and change it to Title case
+          */
+         StringBuilder builder = new StringBuilder();
+         public void exercise1Point37()
+         {
+             Console.WriteLine("Enter a phrase");
+             String s = Console.ReadLine();
+            
+             int result = s.CompareTo("hai");
+             Console.WriteLine(result);
+
+             s = s.Trim();
+            // Console.WriteLine(s);
+
+             String[] subString = s.Split(' ');
+
+             for (int i = 0; i < subString.Length; i++)
+             {
+                 
+                 char[] charValues = subString[i].ToCharArray();
+                 changeFirstLetter(charValues);
+             }
+             Console.WriteLine(builder);
+
+             Console.Read();
+         }
+         void changeFirstLetter(char[] charValues)
+         {
+               string s = new string(charValues);
+            // Console.WriteLine("f"+s);
+
+             charValues[0] = Char.ToUpper(charValues[0]);
+             string newS = new string(charValues);
+             //Console.WriteLine(newS);
+
+             builder.Append(newS).Append(" ");
+           
+            
+
+         }
+     }
+
 
      class ex1Point27
     {

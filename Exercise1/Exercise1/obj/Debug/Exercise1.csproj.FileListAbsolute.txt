@@ -4,3 +4,9 @@ D:\SA 39 057\Exercises\SA-39\Exercise1\Exercise1\bin\Debug\Exercise1.pdb
 D:\SA 39 057\Exercises\SA-39\Exercise1\Exercise1\obj\Debug\Exercise1.csprojResolveAssemblyReference.cache
 D:\SA 39 057\Exercises\SA-39\Exercise1\Exercise1\obj\Debug\Exercise1.exe
 D:\SA 39 057\Exercises\SA-39\Exercise1\Exercise1\obj\Debug\Exercise1.pdb
+D:\Sa 39 57\SA-39\Exercise1\Exercise1\bin\Debug\Exercise1.exe.config
+D:\Sa 39 57\SA-39\Exercise1\Exercise1\obj\Debug\Exercise1.exe
+D:\Sa 39 57\SA-39\Exercise1\Exercise1\obj\Debug\Exercise1.pdb
+D:\Sa 39 57\SA-39\Exercise1\Exercise1\bin\Debug\Exercise1.exe
+D:\Sa 39 57\SA-39\Exercise1\Exercise1\bin\Debug\Exercise1.pdb
+D:\Sa 39 57\SA-39\Exercise1\Exercise1\obj\Debug\Exercise1.csprojResolveAssemblyReference.cache
