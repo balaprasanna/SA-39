@@ -69,6 +69,13 @@ namespace Exercise1
                             ex1Point27 ex1p27 = new ex1Point27();
                             ex1p27.exercise1Point27();
                         }
+                        else if (val == 35)
+                        {
+                            ex1Point35 ex1p35 = new ex1Point35();
+                            ex1p35.exercise1Point35();
+                        }
+                            
+
                         else
                         {
                             Console.Write(" Oops No exercise found @ this number");
@@ -79,7 +86,7 @@ namespace Exercise1
 
         
     }
-
+    
     class ex1Point1
     {
         // a program to request name and print a greeting message
@@ -270,6 +277,79 @@ namespace Exercise1
         }
     }
 
+    class ex1Point35
+    {
+        /* Program to read a phrase and to count the number of vowels in it
+         */
+        static int global = 0;
+        static int aVowel = 0;
+        static int eVowel = 0;
+        static int iVowel = 0;
+        static int oVowel = 0;
+        static int uVowel = 0;
+           
+        public void exercise1Point35()
+        {
+           
+           Console.WriteLine("Enter a phrase");
+           String s =Console.ReadLine();
+           s = s.Trim();
+           Console.WriteLine(s);
+           String[] subString = s.Split(' ');
+         
+               for (int i = 0; i < subString.Length; i++)
+               {
+                 Console.WriteLine("##-"+subString[i]);
+                 char[] charValues =subString[i].ToCharArray();
+                 checkForVowels(charValues);
+               }
+               printAllVowelCounts();
+
+           Console.Read();
+        }
+
+        void printAllVowelCounts()
+        {
+            Console.WriteLine("##-aVowel-##" + aVowel);
+            Console.WriteLine("##-eVowel-##" + eVowel);
+            Console.WriteLine("##-iVowel-##" + iVowel);
+            Console.WriteLine("##-oVowel-##" + oVowel);
+            Console.WriteLine("##-uVowel-##" + uVowel);
+        }
+
+        public static void checkForVowels(char[] charValues)
+        {
+            for (int j = 0; j < charValues.Length; j++)
+            {
+
+                if (charValues[j] == 'a')
+                {
+                    aVowel++;
+                }
+                else if (charValues[j] == 'e')
+                {
+                    eVowel++;
+                }
+                else if (charValues[j] == 'i')
+                {
+                    iVowel++;
+                }
+                else if (charValues[j] == 'o')
+                {
+                    oVowel++;
+                }
+                else if (charValues[j] == 'u')
+                {
+                    uVowel++;
+                }
+                else
+                {
+
+                }
+
+            }
+        }
+    }
 
      class ex1Point27
     {
