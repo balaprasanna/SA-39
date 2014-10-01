@@ -10,87 +10,111 @@ namespace Exercise1
     {
         static void Main(string[] args)
         {
-           
-                   Console.Write("Please Enter Exercise Number   ");
-                   String num = Console.ReadLine();
-                   int val = Convert.ToInt16(num);
-                        if (val == 1)
-                        {
-                            ex1Point1 ex1p1 = new ex1Point1();
-                            ex1p1.exercise1Point1();
-                        }
-                        else if (val == 2)
-                        {
-                            ex1Point2 ex1p2 = new ex1Point2();
-                            ex1p2.exercise1Point2();
-                        }
-                        else if (val == 3)
-                        {
-                            ex1Point3 ex1p3 = new ex1Point3();
-                            ex1p3.exercise1Point3();
-                        }
-                        else if (val == 4)
-                        {
-                            ex1Point4 ex1p4 = new ex1Point4();
-                            ex1p4.exercise1Point4();
-                        }
-                        else if (val == 5)
-                        {
-                            ex1Point5 ex1p5 = new ex1Point5();
-                            ex1p5.exercise1Point5();
-                        }
-                        else if (val == 6)
-                        {
-                            ex1Point6 ex1p6 = new ex1Point6();
-                            ex1p6.exercise1Point6();
-                        }
-                        else if (val == 7)
-                        {
-                            ex1Point7 ex1p7 = new ex1Point7();
-                            ex1p7.exercise1Point7();
-                        }
-                        else if (val == 8)
-                        {
-                            ex1Point8 ex1p8 = new ex1Point8();
-                            ex1p8.exercise1Point8();
-                        }
-                        else if (val == 9)
-                        {
-                            ex1Point9 ex1p9 = new ex1Point9();
-                            ex1p9.exercise1Point9();
-                        }
-                        else if (val == 10)
-                        {
-                            ex1Point10 ex1p10 = new ex1Point10();
-                            ex1p10.exercise1Point10();
-                        }
-                        else if (val == 27)
-                        {
-                            ex1Point27 ex1p27 = new ex1Point27();
-                            ex1p27.exercise1Point27();
-                        }
-                        else if (val == 35)
-                        {
-                            ex1Point35 ex1p35 = new ex1Point35();
-                            ex1p35.exercise1Point35();
-                        }
-                        else if (val == 36)
-                        {
-                            ex1Point36 ex1p36 = new ex1Point36();
-                            ex1p36.exercise1Point36();
-                        }
-                        else if (val == 37)
-                        {
-                            ex1Point37 ex1p37 = new ex1Point37();
-                            ex1p37.exercise1Point37();
-                        }   
-                        else
-                        {
-                            Console.Write(" Oops No exercise found @ this number");
-                            Console.ReadLine();
-                        }
-           
+            string yesOrNo;
+
+            do
+            {
+
+                Console.Write("Please Enter Exercise Number");
+                String num = Console.ReadLine();
+                int val = Convert.ToInt16(num);
+                if (val == 1)
+                {
+                    ex1Point1 ex1p1 = new ex1Point1();
+                    ex1p1.exercise1Point1();
+                }
+                else if (val == 2)
+                {
+                    ex1Point2 ex1p2 = new ex1Point2();
+                    ex1p2.exercise1Point2();
+                }
+                else if (val == 3)
+                {
+                    ex1Point3 ex1p3 = new ex1Point3();
+                    ex1p3.exercise1Point3();
+                }
+                else if (val == 4)
+                {
+                    ex1Point4 ex1p4 = new ex1Point4();
+                    ex1p4.exercise1Point4();
+                }
+                else if (val == 5)
+                {
+                    ex1Point5 ex1p5 = new ex1Point5();
+                    ex1p5.exercise1Point5();
+                }
+                else if (val == 6)
+                {
+                    ex1Point6 ex1p6 = new ex1Point6();
+                    ex1p6.exercise1Point6();
+                }
+                else if (val == 7)
+                {
+                    ex1Point7 ex1p7 = new ex1Point7();
+                    ex1p7.exercise1Point7();
+                }
+                else if (val == 8)
+                {
+                    ex1Point8 ex1p8 = new ex1Point8();
+                    ex1p8.exercise1Point8();
+                }
+                else if (val == 9)
+                {
+                    ex1Point9 ex1p9 = new ex1Point9();
+                    ex1p9.exercise1Point9();
+                }
+                else if (val == 10)
+                {
+                    ex1Point10 ex1p10 = new ex1Point10();
+                    ex1p10.exercise1Point10();
+                }
+                // continued on 1/10/2014
+                else if(val==11){
+                    ex1Point11 ex1p11 = new ex1Point11();
+                    ex1p11.exercise1Point11();
+                }
+
+                else if (val == 27)
+                {
+                    ex1Point27 ex1p27 = new ex1Point27();
+                    ex1p27.exercise1Point27();
+                }
+                else if (val == 35)
+                {
+                    ex1Point35 ex1p35 = new ex1Point35();
+                    ex1p35.exercise1Point35();
+                }
+                else if (val == 36)
+                {
+                    ex1Point36 ex1p36 = new ex1Point36();
+                    ex1p36.exercise1Point36();
+                }
+                else if (val == 37)
+                {
+                    ex1Point37 ex1p37 = new ex1Point37();
+                    ex1p37.exercise1Point37();
+                }
+
+                else
+                {
+                    Console.Write(" Oops No exercise found @ this number");
+                    Console.ReadLine();
+                }
+                
+                
+                
+                
+                // to continue the looping..
+                Console.Write("Do you want to continue .y/n");
+                yesOrNo=Console.ReadLine().ToString();
+            }
+            while (yesOrNo.Equals("y"));
+            
+
         }
+       
+        
+
 
         
     }
@@ -200,7 +224,7 @@ namespace Exercise1
             double sqrtOfTheNumberRounded = Math.Round(sqrtOfTheNumber,3);
             Console.Write("Square Root of the double precision number rounded to 3 decimal places *{0}* is = {1}", number, sqrtOfTheNumberRounded);
            //Console.Write("Square Root of the double precision number rounded to 3 decimal places *{0}* is = {1:.###}", number, sqrtOfTheNumber);
-            Console.ReadLine();
+            Console.ReadLine(); 
         }
     }
 
@@ -284,6 +308,53 @@ namespace Exercise1
          Console.ReadLine();
         }
     }
+
+    class ex1Point11
+    {
+        /*
+        */
+        public void exercise1Point11()
+        {
+          double[,] twoDiArray=new double[2,5];
+          twoDiArray[0, 0] = 10;
+          twoDiArray[0, 1] = 10;
+          Console.WriteLine(twoDiArray[0,1].ToString());
+        }
+    }
+
+    class sorting
+    {
+        void SelectionSort()
+        {
+            //int i = ISS.RV.LIB.ISSConsole.ReadInt("Hai please enter a number");
+            //int j = Convert.ToInt16(Console.ReadLine());
+            //int[] gValues = new int[4] {2,3,4,6};
+
+            // selection sorting algorithm
+            int[] a = new int[10] { 10, 5, 8, 3, 7, 5, 4, 3, 67, 1 };
+            int[] sortedArray = new int[10];
+
+            for (int f = 0; f < a.Length; f++)
+            {
+
+                for (int ii = f;// assigning f to ii, in order to move the pointer one step from left to right
+                    ii < a.Length; ii++)
+                {
+                    // checking a[f] which the least most [item[0]] in our array. for the iteration. and the posititon is being moved as the loop goes on
+                    if (a[f] > a[ii])
+                    {
+                        int temp = a[f];
+                        a[f] = a[ii];
+                        a[ii] = temp;
+                    }
+
+                }
+                Console.Write(a[f].ToString() + " ");
+            }
+              
+        }
+    }
+
 
     class ex1Point35
     {
