@@ -73,7 +73,26 @@ namespace Exercise1
                     ex1Point11 ex1p11 = new ex1Point11();
                     ex1p11.exercise1Point11();
                 }
-
+                else if (val == 12)
+                {
+                    ex1Point12 ex1p12 = new ex1Point12();
+                    ex1p12.exercise1Point12();
+                }
+                else if (val == 13)
+                {
+                    ex1Point13 ex1p13 = new ex1Point13();
+                    ex1p13.exercise1Point13();
+                }
+                else if (val == 14)
+                {
+                    ex1Point14 ex1p14 = new ex1Point14();
+                    ex1p14.exercise1Point14();
+                }
+                else if (val == 15)
+                {
+                    ex1Point15 ex1p15 = new ex1Point15();
+                    ex1p15.exercise1Point15();
+                }
                 else if (val == 27)
                 {
                     ex1Point27 ex1p27 = new ex1Point27();
@@ -315,13 +334,88 @@ namespace Exercise1
         */
         public void exercise1Point11()
         {
-          double[,] twoDiArray=new double[2,5];
-          twoDiArray[0, 0] = 10;
-          twoDiArray[0, 1] = 10;
-          Console.WriteLine(twoDiArray[0,1].ToString());
+          
+            double Number = ISS.RV.LIB.ISSConsole.ReadDouble("Enter the distance travelled in kms");
+            const double FixedCharge = 2.40;
+            double TotalFare = FixedCharge+(Number*0.4);
+            double RoundedTotalFare = Math.Round(TotalFare, 2);
+            Console.WriteLine("Total Fare is {0:.#0} -- {0}", TotalFare);
+        }
+    }
+    class ex1Point12
+    {
+        /*
+        */
+        public void exercise1Point12()
+        {
+
+            double Number = ISS.RV.LIB.ISSConsole.ReadDouble("Enter the distance travelled in kms");
+            const double FixedCharge = 2.40;
+            double TotalFare = FixedCharge + (Number * 0.4);
+            double RoundedTotalFare = Math.Round(TotalFare, 2);
+            double RoundedTotalFareCeil = Math.Ceiling(TotalFare*100)/10;
+            double RoundedTotalFareFloor = Math.Floor(TotalFare*100)/10;
+            Console.WriteLine("Total Fare is {0} - {1:.#0} ceil {2:.#0} floor{3:.#0}-", TotalFare, RoundedTotalFare, RoundedTotalFareCeil, RoundedTotalFareFloor);
+        }
+    }
+    class ex1Point13
+    {
+        /*
+        */
+        public void exercise1Point13()
+        {
+            // done in prevoius exercise 1.12 itself..please do refer/.
+            ex1Point12 obj = new ex1Point12();
+            obj.exercise1Point12();
         }
     }
 
+    class ex1Point14
+    {
+        /*
+        */
+        public void exercise1Point14()
+        {
+            double a = ISS.RV.LIB.ISSConsole.ReadDouble("Enter A value");
+            double b = ISS.RV.LIB.ISSConsole.ReadDouble("Enter b value");
+            double c = ISS.RV.LIB.ISSConsole.ReadDouble("Enter c value");
+            double s= (a+b+c)/2;
+            double area = Math.Sqrt(s * (s - a) * (s - b) * (s - c));
+            Console.WriteLine("Area of the triagle whose sides {0},{1},{2} is {3}", a, b, c, area);
+        }
+    }
+
+    class ex1Point15
+    {
+        /*
+        */
+        public void exercise1Point15()
+        {
+        int a=ISS.RV.LIB.ISSConsole.ReadInt("Enter a three digit number");
+            int numberEntered=a;
+        if ((a>=100) && (a<=999))
+        {
+            int modulo = 0;
+            int division = 0;
+            int sumOfCubes = 0;
+            const int size=4;
+            int i=0;
+            do
+            {
+                 modulo = a % 10;
+                 division = a / 10;
+                 sumOfCubes = sumOfCubes + (modulo * modulo*modulo);
+                 i++;
+                 a = division;
+            } while (i<size);
+            if (sumOfCubes == numberEntered)
+            {
+                Console.WriteLine(sumOfCubes.ToString() +"Is an Armstrong Number");
+            }
+        }
+
+        }
+    }
     class sorting
     {
         void SelectionSort()
