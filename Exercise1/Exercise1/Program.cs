@@ -93,6 +93,33 @@ namespace Exercise1
                     ex1Point15 ex1p15 = new ex1Point15();
                     ex1p15.exercise1Point15();
                 }
+                else if (val == 16)
+                {
+                    ex1Point16 ex1p16 = new ex1Point16();
+                    ex1p16.exercise1Point16();
+                }
+                else if (val == 17)
+                {
+                    ex1Point17 ex1p17 = new ex1Point17();
+                    ex1p17.exercise1Point17();
+                }
+
+                else if (val == 18)
+                {
+                    ex1Point18 ex1p18 = new ex1Point18();
+                    ex1p18.exercise1Point18();
+                }
+                else if (val == 19)
+                {
+                    ex1Point19 ex1p19 = new ex1Point19();
+                    ex1p19.exercise1Point19();
+                }
+
+                else if (val == 20)
+                {
+                    ex1Point20 ex1p20 = new ex1Point20();
+                    ex1p20.exercise1Point20();
+                }
                 else if (val == 27)
                 {
                     ex1Point27 ex1p27 = new ex1Point27();
@@ -392,7 +419,7 @@ namespace Exercise1
         public void exercise1Point15()
         {
         int a=ISS.RV.LIB.ISSConsole.ReadInt("Enter a three digit number");
-            int numberEntered=a;
+        int numberEntered=a;
         if ((a>=100) && (a<=999))
         {
             int modulo = 0;
@@ -412,10 +439,163 @@ namespace Exercise1
             {
                 Console.WriteLine(sumOfCubes.ToString() +"Is an Armstrong Number");
             }
+            else
+            {
+                Console.WriteLine(numberEntered + "Is not Armstrong Number");
+            }
         }
 
         }
     }
+
+
+    class ex1Point16
+    {
+        /*
+        */
+        public void exercise1Point16()
+        {
+            String name = ISS.RV.LIB.ISSConsole.ReadString("Enter the name");
+            char gender = ISS.RV.LIB.ISSConsole.ReadChar("Gender : M/F [M- Male, F-Female]");
+            String[] salutationStrings = new String[2]{"Mr.","Mrs."};
+            if (gender.Equals('M') || (gender.Equals('m')))
+            {
+                Console.WriteLine("Hello, Good Morning {0} {1}",salutationStrings[0],name);
+            }
+            else if (gender.Equals('F') || (gender.Equals('f')))
+            {
+                Console.WriteLine("Hello, Good Morning {0} {1}", salutationStrings[1],name);
+            }
+            else
+            {
+                Console.WriteLine("Oops invalid gender");
+                return;
+            }
+        }
+    }
+
+    class ex1Point17
+    {
+        /*
+        */
+        public void exercise1Point17()
+        {
+            String name = ISS.RV.LIB.ISSConsole.ReadString("Enter the name");
+            char gender = ISS.RV.LIB.ISSConsole.ReadChar("Gender : M/F [M- Male, F-Female]");
+            int age = ISS.RV.LIB.ISSConsole.ReadInt("Enter the Age");
+            String[] salutationStrings = new String[2] { "Mr.", "Mrs." };
+            String[] uncleOrAunty = new string[2] { "Uncle","Aunty"};
+            if (age >= 40)
+            {
+                if (gender.Equals('M') || (gender.Equals('m')))
+                {
+                    Console.WriteLine("Hello, Good Morning {0} {1}", uncleOrAunty[0] ,name);
+                }
+                else if (gender.Equals('F') || (gender.Equals('f')))
+                {
+                    Console.WriteLine("Hello, Good Morning {0} {1}", uncleOrAunty[1], name);
+                }
+            }
+            else
+            {
+                if (gender.Equals('M') || (gender.Equals('m')))
+                {
+                    Console.WriteLine("Hello, Good Morning {0} {1}", salutationStrings[0], name);
+                }
+                else if (gender.Equals('F') || (gender.Equals('f')))
+                {
+                    Console.WriteLine("Hello, Good Morning {0} {1}", salutationStrings[1], name);
+                }
+            }
+        }
+    }
+
+    class ex1Point18
+    {
+        /*
+        */
+        public void exercise1Point18()
+        {
+
+            int mark = ISS.RV.LIB.ISSConsole.ReadInt("Enter the Marks");
+
+            if (mark >= 80 && mark <= 100)
+            {
+                Console.WriteLine("Your Grade is{0}","A");
+            }
+            else if(mark >=60 && mark <=79){
+                Console.WriteLine("Your Grade is{0}", "B");
+            }
+            else if (mark > 40 && mark <= 59)
+            {
+                Console.WriteLine("Your Grade is{0}", "C");
+            }
+            else if (mark >= 0 && mark <= 40)
+            {
+                Console.WriteLine("Your Grade is{0}", "D");
+            }
+            else if (mark < 0 || mark > 100)
+            {
+                Console.WriteLine("**Error**");
+            }
+        }
+    }
+
+    class ex1Point19
+    {
+        /*
+        */
+        public void exercise1Point19()
+        {
+
+            double DistanceTravelled = ISS.RV.LIB.ISSConsole.ReadDouble("Enter the Distance travelled");
+            double roundedValue = Math.Ceiling(DistanceTravelled*10) / 10;
+           const double minimumFare=2.40;
+           const double MinimumFareFreeDist = 0.5;
+           const double NextMinimumFareDist = 8.5;
+
+           const double next8_5KmsFarePer100Meters = 0.04;
+           const double above8_5KmsFarePer100Meters = 0.05;
+
+
+            if(roundedValue <= MinimumFareFreeDist){
+                double fare = minimumFare;
+             Console.WriteLine("The fare is {0:.#0}",fare);
+            }
+           else if (roundedValue > MinimumFareFreeDist && roundedValue <= NextMinimumFareDist)
+           {
+               double fare = minimumFare +
+                   (((roundedValue - MinimumFareFreeDist) * 10) * next8_5KmsFarePer100Meters);
+          Console.WriteLine("The fare is {0:.#0}",fare);
+           }
+            else if (roundedValue > NextMinimumFareDist)
+            {
+                double fare = minimumFare + 
+                    (((NextMinimumFareDist) * 10) * next8_5KmsFarePer100Meters) +
+                    (above8_5KmsFarePer100Meters * ((roundedValue-(MinimumFareFreeDist + NextMinimumFareDist))*10));
+                Console.WriteLine("The fare is {0:.#0}", fare);
+            }
+
+               //double fare = minimumFare + (next8_5KmsFarePer100Meters * (8.5 * 10)) +
+               //   (above8_5KmsFarePer100Meters * ((roundedValue * 10) - ((MinimumFareFreeDist + NextMinimumFareDist) * 10)));
+           
+         
+          
+        }
+    }
+
+
+    class ex1Point20
+    {
+        /*
+        */
+        public void exercise1Point20()
+        {
+           
+        }
+    }
+
+
     class sorting
     {
         void SelectionSort()
